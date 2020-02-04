@@ -138,8 +138,17 @@ class DinamicTable extends React.Component{
           
         
         return(
-             
+            <div>    
             <Table columns={columns} dataSource={this.state.arrProyectos} onChange={onChange} />
+            {this.state.arrProyectos.map((item, index)=>(
+              this.state.arrProyectos.slice(0,10).map((item,index)=>[
+                 
+                 <label>{item["start date"][index]}</label>
+                 
+                 
+              ])
+            ))}
+            </div>
         );
 
     }
